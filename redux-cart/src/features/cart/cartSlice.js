@@ -15,9 +15,9 @@ const cartSlice = createSlice({
          existingItem.quantity += action.payload.quantity;
       } else {
          state.cartItems.push({
-  ...action.payload,
-  quantity: 1
-});;
+         ...action.payload,
+         quantity: 1
+         });;
       }
    }
 }},
