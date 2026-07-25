@@ -4,11 +4,17 @@ import Products from './components/Products'
 import Cart from './components/Cart'
 
 function App() {
- 
+ const laptop = {
+    id: 1,
+    name: "Laptop",
+    price: 1200
+};
+
+
 
   return (
     <>
-      <Products />
+      <Products product={laptop} />
       <Cart />
     </>
   )

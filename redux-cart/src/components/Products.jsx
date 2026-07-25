@@ -10,3 +10,4 @@ const Products = ({ product }) => {
         </button>
     );
 };
+export default Products;

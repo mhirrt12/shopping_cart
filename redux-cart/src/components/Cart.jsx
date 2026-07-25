@@ -5,3 +5,4 @@ const Cart = () => {
 
     return <h1>{cartItems.length}</h1>;
 };
+export default Cart;
