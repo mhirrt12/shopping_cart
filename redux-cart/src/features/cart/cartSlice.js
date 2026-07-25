@@ -8,9 +8,14 @@ import { createSlice } from '@reduxjs/toolkit';
 const cartSlice = createSlice({
     name: 'cart',
     initialState,
-    reducers:{reducers:{
+    reducers:{
    addItem(state,action){
-       
+      const existingItem = state.cartItems.find((item)=> item.id === action.payload.id);
+      if(existingItem){
+         existingItem.quantity += action.payload.quantity;
+      } else {
+         state.cartItems.push(action.payload);
+      }
    }
 }},
-}); 
+); 
