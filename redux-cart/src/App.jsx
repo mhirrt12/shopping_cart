@@ -2,6 +2,7 @@
 import './App.css'
 import Products from './components/Products'
 import Cart from './components/Cart'
+import CartCount from './components/CartCount';
 
 function App() {
  const laptop = {
@@ -16,6 +17,7 @@ function App() {
     <>
       <Products product={laptop} />
       <Cart />
+      <CartCount />
     </>
   )
 }
