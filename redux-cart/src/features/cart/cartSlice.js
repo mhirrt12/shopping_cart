@@ -19,6 +19,9 @@ const cartSlice = createSlice({
          quantity: 1
          });;
       }
+            state.totalQuantity += action.payload.quantity;
+            state.totalAmount += action.payload.quantity * action.payload.price;
+            
    }
 }},
 ); 
