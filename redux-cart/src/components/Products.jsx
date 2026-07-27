@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "./productThunk";
+import { fetchProducts } from "../features/products/productThunk";
 
 const Products = () => {
 
@@ -16,3 +16,4 @@ Load Products
 )
 
 }
+export default Products;
