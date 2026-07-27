@@ -5,13 +5,16 @@ const CartCount = () => {
 
     // const totalamount = useSelector((state) => state.cart.totalAmount);
     // const totalQuantitiy = useSelector((state) => state.cart. totalQuantity);
-    return <>
+    return (<>
         <h1>items in cart: {cartItems.length}</h1>;
         <h1>total amount : {totalAmount}</h1>;
         <h1>total quantity : {totalQuantity}</h1>;
-        {/* {cartItems.map((items) => {
-            
-        })} */}
-    </>
+        {cartItems.map((items) => {
+            return(<div key={items.id}>
+                <p>name:{items.name}</p>
+                <p>price:{items.price}</p>
+            </div>)
+        })}
+    </>)
 }
 export default CartCount;
