@@ -1,13 +1,18 @@
-import { useDispatch } from "react-redux";
-import { addItem } from "../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "./productThunk";
 
-const Products = ({ product }) => {
-    const dispatch = useDispatch();
+const Products = () => {
 
-    return (
-        <button onClick={() => dispatch(addItem(product))}>
-            Add to Cart
-        </button>
-    );
-};
-export default Products;
+const dispatch = useDispatch();
+
+const {products, loading, error} =
+useSelector(state => state.products);
+
+
+return (
+<button onClick={()=>dispatch(fetchProducts())}>
+Load Products
+</button>
+)
+
+}
