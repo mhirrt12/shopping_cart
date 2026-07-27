@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Products product={laptop} />
+      <Products />
       <Cart />
       <CartCount />
     </>
